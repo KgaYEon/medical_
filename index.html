@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+            /* background-image: url("https://postfiles.pstatic.net/MjAyNDA0MjZfMjI3/MDAxNzE0MTM2NjM5NjQ0.mAhSvK4iKTJaOy0fLuj-fMANcXQJqtJCK8P1-XHVbw4g.f9or4WJQaMZQ7dQuGnG5wKk9wu0fWsQJGi1mz5E-Bdsg.JPEG/lol1.jpg?type=w966"); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            margin: 0;
+            filter : saturate(0.5);
+        
+        }
+        
+        /* 네비게이션 바 스타일 */
+        header {
+            font-family: "Gowun Dodum", sans-serif;
+            background-color: black;
+            font-weight: 400;
+            font-style: normal;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+        
+        header .header{
+            display: flex;
+            align-items: center;
+        }
+
+        header h1{
+            color : white;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 24px;
+        }
+
+        nav {
+            text-align: right;
+            
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+       /* 슬라이드 */
+       .slider-container{
+        width : 100%;
+        overflow: hidden;
+        position:relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       }
+
+       .slider{
+        display : flex;
+        transition : transform 0.5s ease-in-out;
+        margin : 0 auto;
+        
+       }
+
+       .slide{
+        min-width : 100%;
+       }
+
+       .slide img{
+        width: 100%;
+        height:  80%;
+        object-fit: cover;
+        align-items: center;
+       }
+
+       .slide-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+       footer p {
+            font-size: 18px;
+            margin: 5px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class ="header">
+            <h1>MEDICAL TEAM</h1>
+
+        <nav>
+            <a href="index.html">홈</a>
+            <a href="dari.html">대리랭크</a>
+            <a href="duo.html">듀오랭크</a>
+            <a href="work.html">작업현황</a>
+        </nav>
+
+        </div>
+    </header>
+
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="slide1.png" alt="Image 1"></div>
+            <div class="slide"><img src="slide2.png" alt="Image 2"></div>
+            <div class="slide"><img src="slide3.png" alt="Image 2"></div>
+        
+        </div>
+    </div>
+
+    <script>
+        let slider = document.querySelector('.slider');
+    let slides = document.querySelectorAll('.slide');
+
+    let index = 0;
+    let slideWidth = slider.clientWidth;
+
+    function nextSlide(){
+    index++;
+    if(index >= slides.length) index = 0;
+    slider.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+setInterval(nextSlide, 3000);
+    </script>
+
+<footer>
+    <p>MEDICAL TEAM</p>
+    <p>카톡ID : lolmedical</p>
+    <p style="color: gray;">@copyright_MEDICALTEAM</p>
+</footer>
+</body>
+</html>
